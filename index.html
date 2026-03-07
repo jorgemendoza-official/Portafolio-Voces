@@ -7,32 +7,16 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body { 
-        font-family: 'Inter', sans-serif; background: #121212; color: white; margin: 0; overflow-x: hidden;
-        -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
-    }
+    body { font-family: 'Inter', sans-serif; background: #121212; color: white; margin: 0; overflow-x: hidden; -webkit-user-select: none; user-select: none; }
     h1, h2 { font-family: 'Cormorant Garamond', serif; }
     #splash { position: fixed; inset: 0; z-index: 9999; background: #000; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: opacity 0.8s ease; }
     header { height: 45vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(to bottom, #000, #121212); text-align: center; }
     .spectrum-bars { display: flex; gap: 6px; height: 40px; margin-top: 20px; }
     .bar { width: 4px; background: white; border-radius: 2px; animation: bounce 1.2s infinite ease-in-out; }
     @keyframes bounce { 0%, 100% { transform: scaleY(0.5); opacity: 0.5; } 50% { transform: scaleY(2); opacity: 1; } }
-    
-    .contact-link { 
-        color: #ffffff; text-decoration: none; font-size: 1.5em; 
-        letter-spacing: 5px; transition: 0.3s; font-weight: bold;
-    }
+    .contact-link { color: #ffffff; text-decoration: none; font-size: 1.5em; letter-spacing: 5px; transition: 0.3s; font-weight: bold; }
     .contact-link:hover { color: #888; letter-spacing: 7px; }
-
-    .protection-note {
-        max-width: 600px;
-        margin: 20px auto 0;
-        line-height: 1.6;
-        opacity: 0.6;
-        font-size: 0.75rem;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-    }
+    .protection-note { max-width: 600px; margin: 20px auto 0; line-height: 1.6; opacity: 0.6; font-size: 0.75rem; letter-spacing: 0.5px; text-transform: uppercase; }
   </style>
 </head>
 <body oncontextmenu="return false;">
@@ -52,17 +36,17 @@
       <div class="bar" style="animation-delay: 0.4s"></div>
       <div class="bar" style="animation-delay: 0.1s"></div>
     </div>
-    <audio id="audio-bienvenida"><source src="demo_reel/Bienvenida.mp3" type="audio/mpeg"></audio>
+    <audio id="audio-bienvenida"><source src="bienvenida.mp3" type="audio/mpeg"></audio>
   </header>
 
   <main class="max-w-3xl mx-auto px-4">
     <section class="bg-[#1a1c23] p-8 rounded-xl shadow-2xl mt-10">
       <h2 class="text-4xl text-center mb-10">Demo Reel</h2>
       <div class="space-y-10">
-        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">Comercial</p><audio controls class="w-full h-10"><source src="demo_reel/Demo_Comercial_Jorge_Mendoza.mp3"></audio></div>
-        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">Narración Sofisticada</p><audio controls class="w-full h-10"><source src="demo_reel/Narracion_Dramatica_Sofisticada.mp3"></audio></div>
-        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">Audiolibro</p><audio controls class="w-full h-10"><source src="demo_reel/Audiobook_Audiolibro.mp3"></audio></div>
-        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">Interpretación</p><audio controls class="w-full h-10"><source src="demo_reel/Amada_Inmortal.mp3"></audio></div>
+        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">Comercial</p><audio controls class="w-full h-10"><source src="Demo_Comercial_Jorge_Mendoza.mp3"></audio></div>
+        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">Narración Sofisticada</p><audio controls class="w-full h-10"><source src="Narracion_Dramatica_Sofisticada.mp3"></audio></div>
+        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">Audiolibro</p><audio controls class="w-full h-10"><source src="Audiobook_Audiolibro.mp3"></audio></div>
+        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">Interpretación</p><audio controls class="w-full h-10"><source src="Amada_Inmortal.mp3"></audio></div>
       </div>
     </section>
   </main>
@@ -72,9 +56,7 @@
       <br><br>
       <div class="px-4">
           <span style="font-size: 0.85em; letter-spacing: 1px; color: #888;">&copy; 2026 <strong>Jorge Mendoza Vargas</strong>. Locución Institucional Protegida.</span>
-          <p class="protection-note">
-            Este portafolio cuenta con protocolos de protección de identidad vocal frente a sistemas de inteligencia artificial y síntesis digital. Todos los derechos reservados.
-          </p>
+          <p class="protection-note">Este portafolio cuenta con protocolos de protección de identidad vocal frente a sistemas de inteligencia artificial y síntesis digital. Todos los derechos reservados.</p>
       </div>
   </footer>
 
@@ -87,11 +69,6 @@
       setTimeout(() => splash.style.display = 'none', 800);
       audioBv.play().catch(e => console.log(e));
     });
-    document.onkeydown = function(e) {
-        if(e.keyCode == 123) return false;
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
-        if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
-    }
   </script>
 </body>
 </html>

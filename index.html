@@ -46,7 +46,7 @@
       <h2 class="text-4xl text-center mb-10">Demo Reel</h2>
       <div class="space-y-10">
         <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">COMERCIAL</p><audio controls class="w-full h-10"><source src="Demo_Comercial_Jorge_Mendoza.mp3"></audio></div>
-        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">NARRACIÓN SOFISTICADA</p><audio controls class="w-full h-10"><source src="Narracion_Dramatica_Sofisticada.mp3"></audio></div>
+        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">NARRACIÓN SOFISTICADA</p><audio controls class="w-full h-10"><source src="Narracion_Sofisticada.mp3"></audio></div>
         <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">AUDIOLIBRO</p><audio controls class="w-full h-10"><source src="Audiobook_Audiolibro.mp3"></audio></div>
         <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">INTERPRETACIÓN</p><audio controls class="w-full h-10"><source src="Amada_Inmortal.mp3"></audio></div>
       </div>
@@ -57,7 +57,7 @@
       <a href="mailto:mendozavoiceover@gmail.com" class="contact-link">CONTACTO</a>
       <br><br>
       <div class="px-4">
-          <span style="font-size: 0.85em; letter-spacing: 1px; color: #888;">&copy; 2026 <strong>Jorge Mendoza</strong>. identidad vocal Protegida.</span>
+          <span style="font-size: 0.85em; letter-spacing: 1px; color: #888;">&copy; 2026 <strong>Jorge Mendoza</strong>. Locución Institucional Protegida.</span>
           <p class="protection-note">
             Este portafolio cuenta con protocolos de protección de identidad vocal frente a sistemas de inteligencia artificial y síntesis digital. Todos los derechos reservados.
           </p>
@@ -70,21 +70,10 @@
     const audioBv = document.getElementById('audio-bienvenida');
 
     btn.addEventListener('click', function() {
-      // 1. Reproducción inmediata (sin esperar a la animación)
-      audioBv.play().then(() => {
-        console.log("Audio iniciado correctamente");
-      }).catch(error => {
-        console.error("Error al reproducir:", error);
-      });
-
-      // 2. Desvanecer splash
+      audioBv.play().catch(e => console.error("Error en bienvenida:", e));
       splash.style.opacity = '0';
-      setTimeout(() => {
-        splash.style.display = 'none';
-      }, 800);
+      setTimeout(() => { splash.style.display = 'none'; }, 800);
     });
   </script>
 </body>
 </html>
-
-

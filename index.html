@@ -36,7 +36,7 @@
       <div class="bar" style="animation-delay: 0.4s"></div>
       <div class="bar" style="animation-delay: 0.1s"></div>
     </div>
-    <audio id="audio-bienvenida"><source src="bienvenida.mp3" type="audio/mpeg"></audio>
+    <audio id="audio-bienvenida" preload="auto"><source src="bienvenida.mp3" type="audio/mpeg"></audio>
   </header>
 
   <main class="max-w-3xl mx-auto px-4">
@@ -66,12 +66,17 @@
     const btn = document.getElementById('btn-entrar');
     const splash = document.getElementById('splash');
     const audioBv = document.getElementById('audio-bienvenida');
+
     btn.addEventListener('click', () => {
       splash.style.opacity = '0';
-      setTimeout(() => splash.style.display = 'none', 800);
-      // Forzamos la carga y reproducción
-      audioBv.load();
-      audioBv.play().catch(e => console.log("Error al reproducir bienvenida:", e));
+      setTimeout(() => {
+        splash.style.display = 'none';
+      }, 800);
+      
+      // Intentar reproducir el audio de bienvenida
+      audioBv.play().catch(error => {
+        console.log("La reproducción automática fue bloqueada o falló:", error);
+      });
     });
   </script>
 </body>

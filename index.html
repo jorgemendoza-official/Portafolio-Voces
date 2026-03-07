@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jorge Mendoza - Actor de Voz</title>
+  <title>Jorge Mendoza Vargas - Actor de Voz</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
@@ -24,17 +24,28 @@
         letter-spacing: 5px; transition: 0.3s; font-weight: bold;
     }
     .contact-link:hover { color: #888; letter-spacing: 7px; }
+
+    /* Estilo sutil para la nota de protección */
+    .protection-note {
+        max-width: 600px;
+        margin: 20px auto 0;
+        line-height: 1.6;
+        opacity: 0.6;
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
   </style>
 </head>
 <body oncontextmenu="return false;">
 
   <div id="splash">
-    <h2 class="text-5xl italic mb-10">Jorge Mendoza</h2>
+    <h2 class="text-5xl italic mb-10">Jorge Mendoza Vargas</h2>
     <button id="btn-entrar" class="px-10 py-3 border border-white hover:bg-white hover:text-black transition-all duration-500 uppercase text-xs tracking-[0.3em]">Entrar</button>
   </div>
 
   <header>
-    <h1 class="text-6xl font-bold">Jorge Mendoza</h1>
+    <h1 class="text-6xl font-bold">Jorge Mendoza Vargas</h1>
     <p class="text-xl italic mt-4 text-gray-400">"No es volumen… es intención."</p>
     <div class="spectrum-bars">
       <div class="bar" style="animation-delay: 0.1s"></div>
@@ -57,10 +68,15 @@
     </section>
   </main>
 
-  <footer style="margin-top: 100px; padding-bottom: 50px; color: #555; font-size: 0.9em; text-align: center;">
+  <footer style="margin-top: 100px; padding-bottom: 50px; color: #555; font-size: 0.9em; text-align: center; border-top: 1px solid #222; padding-top: 50px;">
       <a href="mailto:mendozavoiceover@gmail.com" class="contact-link">CONTACTO</a>
-      <br><br><br>
-      <span style="font-size: 0.8em; letter-spacing: 1px;">&copy; 2026 Jorge Mendoza - Todos los derechos reservados</span>
+      <br><br>
+      <div class="px-4">
+          <span style="font-size: 0.85em; letter-spacing: 1px; color: #888;">&copy; 2026 <strong>Jorge Mendoza Vargas</strong>. Locución Institucional Protegida.</span>
+          <p class="protection-note">
+            Este portafolio cuenta con protocolos de protección de identidad vocal frente a sistemas de inteligencia artificial y síntesis digital. Todos los derechos reservados.
+          </p>
+      </div>
   </footer>
 
   <script>

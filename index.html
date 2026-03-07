@@ -14,6 +14,8 @@
     .spectrum-bars { display: flex; gap: 6px; height: 40px; margin-top: 20px; }
     .bar { width: 4px; background: white; border-radius: 2px; animation: bounce 1.2s infinite ease-in-out; }
     @keyframes bounce { 0%, 100% { transform: scaleY(0.5); opacity: 0.5; } 50% { transform: scaleY(2); opacity: 1; } }
+    .contact-link { color: #ffffff; text-decoration: none; font-size: 1.5em; letter-spacing: 5px; transition: 0.3s; font-weight: bold; }
+    .contact-link:hover { color: #888; letter-spacing: 7px; }
   </style>
 </head>
 <body oncontextmenu="return false;">
@@ -33,24 +35,24 @@
       <div class="bar" style="animation-delay: 0.4s"></div>
       <div class="bar" style="animation-delay: 0.1s"></div>
     </div>
-    <audio id="audio-bienvenida"><source src="bienvenida.mp3" type="audio/mpeg"></audio>
+    <audio id="audio-bienvenida"><source src="Bienvenida" type="audio/mpeg"></audio>
   </header>
 
   <main class="max-w-3xl mx-auto px-4">
     <section class="bg-[#1a1c23] p-8 rounded-xl shadow-2xl mt-10">
       <h2 class="text-4xl text-center mb-10">Demo Reel</h2>
       <div class="space-y-10">
-        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">Comercial</p><audio controls class="w-full h-10"><source src="Demo_Comercial_Jorge_Mendoza.mp3"></audio></div>
-        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">Narración Sofisticada</p><audio controls class="w-full h-10"><source src="Narracion_Dramatica_Sofisticada.mp3"></audio></div>
-        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">Audiolibro</p><audio controls class="w-full h-10"><source src="Audiobook_Audiolibro.mp3"></audio></div>
-        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">Interpretación</p><audio controls class="w-full h-10"><source src="Amada_Inmortal.mp3"></audio></div>
+        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">COMERCIAL</p><audio controls class="w-full h-10"><source src="Demo_Comercial_Jorge_Mendoza"></audio></div>
+        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">NARRACIÓN SOFISTICADA</p><audio controls class="w-full h-10"><source src="Narracion_Dramatica_Sofisticada"></audio></div>
+        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">AUDIOLIBRO</p><audio controls class="w-full h-10"><source src="Audiobook_Audiolibro"></audio></div>
+        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">VOZ ACTORAL</p><audio controls class="w-full h-10"><source src="Amada_Inmortal"></audio></div>
       </div>
     </section>
   </main>
 
   <footer style="margin-top: 100px; padding-bottom: 50px; text-align: center; border-top: 1px solid #222; padding-top: 50px;">
-      <a href="mailto:mendozavoiceover@gmail.com" style="color:white; text-decoration:none; font-size:1.5em; letter-spacing:5px;">CONTACTO</a>
-      <p style="color:#888; margin-top:20px;">&copy; 2026 Jorge Mendoza Vargas. Locución Institucional Protegida.</p>
+      <a href="mailto:mendozavoiceover@gmail.com" class="contact-link">CONTACTO</a>
+      <p style="color:#888; margin-top:20px; font-size: 0.9em; letter-spacing: 1px;">&copy; 2026 <strong>Jorge Mendoza Vargas</strong>. Locución Institucional Protegida.</p>
   </footer>
 
   <script>
@@ -60,7 +62,7 @@
     btn.addEventListener('click', () => {
       splash.style.opacity = '0';
       setTimeout(() => splash.style.display = 'none', 800);
-      audioBv.play().catch(e => console.log("Error de audio:", e));
+      audioBv.play().catch(e => console.log(e));
     });
   </script>
 </body>

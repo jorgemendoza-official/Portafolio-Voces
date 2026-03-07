@@ -69,11 +69,16 @@
     const splash = document.getElementById('splash');
     const audioBv = document.getElementById('audio-bienvenida');
 
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', function() {
+      // 1. Reproducción inmediata (sin esperar a la animación)
+      audioBv.play().then(() => {
+        console.log("Audio iniciado correctamente");
+      }).catch(error => {
+        console.error("Error al reproducir:", error);
+      });
+
+      // 2. Desvanecer splash
       splash.style.opacity = '0';
-      // Reproducción inmediata al clic
-      audioBv.play().catch(e => console.error("Error en bienvenida:", e));
-      
       setTimeout(() => {
         splash.style.display = 'none';
       }, 800);
@@ -81,3 +86,4 @@
   </script>
 </body>
 </html>
+

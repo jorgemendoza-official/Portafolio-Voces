@@ -46,7 +46,7 @@
         <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">COMERCIAL</p><audio controls class="w-full h-10"><source src="Demo_Comercial_Jorge_Mendoza.mp3"></audio></div>
         <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">NARRACIÓN SOFISTICADA</p><audio controls class="w-full h-10"><source src="Narracion_Dramatica_Sofisticada.mp3"></audio></div>
         <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">AUDIOLIBRO</p><audio controls class="w-full h-10"><source src="Audiobook_Audiolibro.mp3"></audio></div>
-        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">VOZ ACTORAL</p><audio controls class="w-full h-10"><source src="Amada_Inmortal.mp3"></audio></div>
+        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">INTERPRETACIÓN</p><audio controls class="w-full h-10"><source src="Amada_Inmortal.mp3"></audio></div>
       </div>
     </section>
   </main>
@@ -69,7 +69,9 @@
     btn.addEventListener('click', () => {
       splash.style.opacity = '0';
       setTimeout(() => splash.style.display = 'none', 800);
-      audioBv.play().catch(e => console.log(e));
+      // Forzamos la carga y reproducción
+      audioBv.load();
+      audioBv.play().catch(e => console.log("Error al reproducir bienvenida:", e));
     });
   </script>
 </body>

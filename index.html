@@ -22,12 +22,12 @@
 <body oncontextmenu="return false;">
 
   <div id="splash">
-    <h2 class="text-5xl italic mb-10">Jorge Mendoza </h2>
+    <h2 class="text-5xl italic mb-10">Jorge Mendoza</h2>
     <button id="btn-entrar" class="px-10 py-3 border border-white hover:bg-white hover:text-black transition-all duration-500 uppercase text-xs tracking-[0.3em]">Entrar</button>
   </div>
 
   <header>
-    <h1 class="text-6xl font-bold">Jorge Mendoza </h1>
+    <h1 class="text-6xl font-bold">Jorge Mendoza</h1>
     <p class="text-xl italic mt-4 text-gray-400">"No es volumen… es intención."</p>
     <div class="spectrum-bars">
       <div class="bar" style="animation-delay: 0.1s"></div>
@@ -36,7 +36,9 @@
       <div class="bar" style="animation-delay: 0.4s"></div>
       <div class="bar" style="animation-delay: 0.1s"></div>
     </div>
-    <audio id="audio-bienvenida" preload="auto"><source src="bienvenida.mp3" type="audio/mpeg"></audio>
+    <audio id="audio-bienvenida" preload="auto">
+      <source src="Bienvenida.mp3" type="audio/mpeg">
+    </audio>
   </header>
 
   <main class="max-w-3xl mx-auto px-4">
@@ -55,7 +57,7 @@
       <a href="mailto:mendozavoiceover@gmail.com" class="contact-link">CONTACTO</a>
       <br><br>
       <div class="px-4">
-          <span style="font-size: 0.85em; letter-spacing: 1px; color: #888;">&copy; 2026 <strong>Jorge Mendoza </strong>. identidad vocal Protegida.</span>
+          <span style="font-size: 0.85em; letter-spacing: 1px; color: #888;">&copy; 2026 <strong>Jorge Mendoza</strong>. Locución Institucional Protegida.</span>
           <p class="protection-note">
             Este portafolio cuenta con protocolos de protección de identidad vocal frente a sistemas de inteligencia artificial y síntesis digital. Todos los derechos reservados.
           </p>
@@ -69,17 +71,13 @@
 
     btn.addEventListener('click', () => {
       splash.style.opacity = '0';
+      // Reproducción inmediata al clic
+      audioBv.play().catch(e => console.error("Error en bienvenida:", e));
+      
       setTimeout(() => {
         splash.style.display = 'none';
       }, 800);
-      
-      // Intentar reproducir el audio de bienvenida
-      audioBv.play().catch(error => {
-        console.log("La reproducción automática fue bloqueada o falló:", error);
-      });
     });
   </script>
 </body>
 </html>
-
-

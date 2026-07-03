@@ -36,8 +36,9 @@
       <div class="bar" style="animation-delay: 0.4s"></div>
       <div class="bar" style="animation-delay: 0.1s"></div>
     </div>
+    <!-- Asegúrate de que este archivo también esté en la carpeta demo_reel -->
     <audio id="audio-bienvenida" preload="auto">
-      <source src="Bienvenida.mp3" type="audio/mpeg">
+      <source src="demo_reel/bienvenida.mp3" type="audio/mpeg">
     </audio>
   </header>
 
@@ -45,31 +46,20 @@
     <section class="bg-[#1a1c23] p-8 rounded-xl shadow-2xl mt-10">
       <h2 class="text-4xl text-center mb-10">Demo Reel</h2>
       <div class="space-y-10">
-        
-        <div class="space-y-10">
-    <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">COMERCIAL</p><audio controls class="w-full h-10"><source src="demo_reel/Demo_Comercial_Jorge_Mendoza.mp3" type="audio/mpeg"></audio></div>
-    
-    <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">NARRACIÓN SOFISTICADA</p><audio controls class="w-full h-10"><source src="demo_reel/Narracion_Sofisticada.mp3" type="audio/mpeg"></audio></div>
-    
-    <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">AUDIOLIBRO</p><audio controls class="w-full h-10"><source src="demo_reel/Audiobook_Audiolibro.mp3" type="audio/mpeg"></audio></div>
-    
-    <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">INTERPRETACIÓN</p><audio controls class="w-full h-10"><source src="demo_reel/Amada_Inmortal.mp3" type="audio/mpeg"></audio></div>
-    
-    <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">NARRACIÓN (DOLCE FAR NIENTE)</p><audio controls class="w-full h-10"><source src="demo_reel/dolce_far_niente.mp3" type="audio/mpeg"></audio></div>
-    
-    <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">DOCUMENTAL (PLANETA TIERRA)</p><audio controls class="w-full h-10"><source src="demo_reel/jorge_mendoza_planeta_tierra.mp3" type="audio/mpeg"></audio></div>
-</div>
+        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">COMERCIAL</p><audio controls class="w-full h-10"><source src="demo_reel/demo_comercial.mp3" type="audio/mpeg"></audio></div>
+        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">NARRACIÓN SOFISTICADA</p><audio controls class="w-full h-10"><source src="demo_reel/narracion_sofisticada.mp3" type="audio/mpeg"></audio></div>
+        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">AUDIOLIBRO</p><audio controls class="w-full h-10"><source src="demo_reel/audiobook_audiolibro.mp3" type="audio/mpeg"></audio></div>
+        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">INTERPRETACIÓN</p><audio controls class="w-full h-10"><source src="demo_reel/amada_inmortal.mp3" type="audio/mpeg"></audio></div>
+        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">NARRACIÓN (DOLCE FAR NIENTE)</p><audio controls class="w-full h-10"><source src="demo_reel/dolce_far_niente.mp3" type="audio/mpeg"></audio></div>
+        <div><p class="text-sm uppercase tracking-widest text-gray-500 mb-2">DOCUMENTAL (PLANETA TIERRA)</p><audio controls class="w-full h-10"><source src="demo_reel/planeta_tierra.mp3" type="audio/mpeg"></audio></div>
+      </div>
     </section>
-</main>
+  </main>
 
   <footer style="margin-top: 100px; padding-bottom: 50px; text-align: center; border-top: 1px solid #222; padding-top: 50px;">
       <a href="mailto:mendozavoiceover@gmail.com" class="contact-link">CONTACTO</a>
-      <br><br>
-      <div class="px-4">
-          <span style="font-size: 0.85em; letter-spacing: 1px; color: #888;">&copy; 2026 <strong>Jorge Mendoza</strong>. Identidad vocal Protegida.</span>
-          <p class="protection-note">
-            Este portafolio cuenta con protocolos de protección de identidad vocal frente a sistemas de inteligencia artificial y síntesis digital. Todos los derechos reservados.
-          </p>
+      <div class="px-4 mt-10">
+          <span style="font-size: 0.85em; letter-spacing: 1px; color: #888;">&copy; 2026 <strong>Jorge Mendoza</strong>.</span>
       </div>
   </footer>
 
@@ -77,12 +67,14 @@
     const btn = document.getElementById('btn-entrar');
     const splash = document.getElementById('splash');
     const audioBv = document.getElementById('audio-bienvenida');
-
     btn.addEventListener('click', function() {
-      audioBv.play().catch(e => console.error("Error en bienvenida:", e));
+      audioBv.play();
       splash.style.opacity = '0';
       setTimeout(() => { splash.style.display = 'none'; }, 800);
     });
+  </script>
+</body>
+</html>
   </script>
 </body>
 </html>

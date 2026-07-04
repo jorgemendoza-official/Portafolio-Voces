@@ -115,24 +115,34 @@
           </p>
       </div>
   </footer>
-
-  <script>
+<script>
     const btn = document.getElementById('btn-entrar');
     const splash = document.getElementById('splash');
     const audioBv = document.getElementById('audio-bienvenida');
 
+    // 1. Splash y bienvenida
     btn.addEventListener('click', async () => {
-      try { await audioBv.play(); } catch (e) { console.log("Autoplay bloqueado:", e); }
+      try { await audioBv.play(); } catch (e) { console.log("Bienvenida:", e); }
       splash.style.opacity = '0';
       setTimeout(() => splash.style.display = 'none', 800);
     });
 
+    // 2. FORZAR carga de todos los audios
     const audios = document.querySelectorAll("audio");
     audios.forEach(a => {
+        a.load(); 
+    });
+
+    // 3. Gestión de reproducción
+    audios.forEach(a => {
       a.addEventListener("play", () => {
-        audios.forEach(b => { if (a !== b) b.pause(); });
+        audios.forEach(b => {
+          if (a !== b) b.pause();
+        });
       });
     });
   </script>
+ 
+  
 </body>
 </html>
